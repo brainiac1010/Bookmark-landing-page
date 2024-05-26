@@ -8,7 +8,7 @@ module.exports = {
         "bookmark-red": "#FA5959",
         "bookmark-blue": "#242A45",
         "bookmark-grey": "#9194A2",
-        "bookmark-white": "#FFFFFF",  // Fixed the color code
+        "bookmark-white": "#FFFFFF",
       },
     },
     fontFamily: {
