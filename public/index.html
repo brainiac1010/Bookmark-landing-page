@@ -9,6 +9,17 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .answer {
+            display: none;
+            padding: 10px 0;
+            color: #333;
+        }
+
+        .faq-item.active .answer {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="font-Poppins">
@@ -194,7 +205,79 @@
             </div>
     </section>
 
-    
+    <!--FAQ-->
+    <section class="bg-bookmark-white py-20">
+        <div class="container">
+            <!-- Heading -->
+            <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+                <h1 class="text-3xl text-center text-bookmark-blue">Frequently Asked Questions</h1>
+                <p class="text-center text-bookmark-grey mt-4">Here are some of our FAQs. If you have any questions
+                    you'd like answered, please feel free to ask.</p>
+            </div>
+            <!-- FAQ items -->
+            <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
+                <div class="faq-item border-b py-4">
+                    <div class="flex items-center">
+                        <span class="flex-1">What is a Bookmark?</span>
+                        <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                    </div>
+                    <div class="answer">
+                        A bookmark is a saved link to a website that you can access easily from your browser.
+                    </div>
+                </div>
+                <div class="faq-item border-b py-4">
+                    <div class="flex items-center">
+                        <span class="flex-1">How can I request a new browser?</span>
+                        <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                    </div>
+                    <div class="answer">
+                        You can request a new browser by contacting our support team through the contact form on our
+                        website.
+                    </div>
+                </div>
+                <div class="faq-item border-b py-4">
+                    <div class="flex items-center">
+                        <span class="flex-1">Is there a mobile app?</span>
+                        <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                    </div>
+                    <div class="answer">
+                        Yes, we have a mobile app available for both Android and iOS.
+                    </div>
+                </div>
+                <div class="faq-item border-b py-4">
+                    <div class="flex items-center">
+                        <span class="flex-1">What about other Chrome browsers?</span>
+                        <i class="text-bookmark-purple fas fa-chevron-down"></i>
+                    </div>
+                    <div class="answer">
+                        We support all Chromium-based browsers, including Chrome, Edge, and Brave.
+                    </div>
+                </div>
+                <button type="button"
+                    class="mt-12 self-center btn btn-purple hover:bg-bookmark-white hover:text-black px-4 py-2 text-sm">More
+                    info</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--contuct us-->
+
+    <section class="bg-bookmark-red text-white py-20">
+        <div class="container">
+            <div class="sm:w-3/4 lg:w-2/4 mx-auto">
+                <p class="font-light uppercase text-center mb-8">35,000+ ALREADY JOINED</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
