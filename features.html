@@ -9,13 +9,157 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/style.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F9FC;
+        }
+
+        header {
+            background: #fff;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E1F26;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li:hover {
+            background-color: #5267DF;
+            border-radius: 0.25rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1rem;
+            background-color: #5267DF;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2A2B3C;
+        }
+
+        .font-Poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .mt-12 {
+            margin-top: 3rem;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container input {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #E5E5E5;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            padding: 0.75rem 1.5rem;
+            background-color: #5267DF;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #2A2B3C;
+        }
+
+        footer {
+            background-color: #1E1F26;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        footer ul li {
+            cursor: pointer;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body class="font-Poppins">
     <!-- Header -->
     <header>
-        <nav class="container flex items-center py-4 mt-4 sm:mt-12">
+        <nav class="container flex items-center py-4 mt-4">
             <div class="py-1">
                 <img src="public/imgs/logo-bookmark.svg" alt="Bookmark Logo">
             </div>
@@ -27,10 +171,10 @@
                     <a href="features.html">Features</a>
                 </li>
                 <li class="cursor-pointer hover:bg-bookmark-purple">
-                    <a href="pricing.html">Pricing</a>
+                    <a href="Pricing.html">Pricing</a>
                 </li>
                 <li class="cursor-pointer hover:bg-bookmark-purple">
-                    <a href="contact.html">Contact</a>
+                    <a href="Contact.html">Contact</a>
                 </li>
                 <button type="button" class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase">
                     <a href="login.html" style="text-decoration: none; color: inherit;">Login</a>
@@ -129,19 +273,17 @@
     <footer class="bg-bookmark-blue py-8">
         <div class="container flex flex-col md:flex-row items-center">
             <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
-                <img src="public/imgs/logo-bookmark-white.png" alt="Bookmark Logo">
+                <img src="public/imgs/logo-bookmark-white.png" alt="">
                 <ul class="flex text-white uppercase gap-12 text-xs">
                     <li class="cursor-pointer"><a href="index.html">Home</a></li>
                     <li class="cursor-pointer"><a href="features.html">Features</a></li>
-                    <li class="cursor-pointer"><a href="pricing.html">Pricing</a></li>
-                    <li class="cursor-pointer"><a href="contact.html">Contact</a></li>
+                    <li class="cursor-pointer"><a href="Pricing.html">Pricing</a></li>
+                    <li class="cursor-pointer"><a href="Contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="flex gap-10 mt-12 md:mt-0">
-                <ul class="flex gap-10">
-                    <li><i class="text-white text-2xl fab fa-twitter"></i></li>
-                    <li><i class="text-white text-2xl fab fa-facebook-square"></i></li>
-                </ul>
+                <li><i class="text-white text-2xl fab fa-twitter"></i></li>
+                <li><i class="text-white text-2xl fab fa-facebook-square"></i></li>
             </div>
         </div>
     </footer>

@@ -48,10 +48,28 @@
                 </button>
             </ul>
             <div class="flex sm:hidden flex-1 justify-end">
-                <i class="text-2xl fas fa-bars"></i>
+                <i class="text-2xl fas fa-bars" id="menu-toggle"></i>
             </div>
         </nav>
-        
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-nav" class="hidden sm:hidden bg-bookmark-white absolute inset-x-0 top-20 py-4">
+            <li class="cursor-pointer hover:bg-bookmark-purple">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="cursor-pointer hover:bg-bookmark-purple">
+                <a href="features.html">Features</a>
+            </li>
+            <li class="cursor-pointer hover:bg-bookmark-purple">
+                <a href="pricing.html">Pricing</a>
+            </li>
+            <li class="cursor-pointer hover:bg-bookmark-purple">
+                <a href="contact.html">Contact</a>
+            </li>
+            <button type="button" class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase">
+                <a href="login.html" style="text-decoration: none; color: inherit;">Login</a>
+            </button>
+        </ul>
     </header>
 
     <!-- Main Content -->
@@ -158,10 +176,10 @@
 
                     <!-- Content-->
                     <div class="flex flex-1 flex-col items-center lg:items-start">
-                        <h1 class="text-3xl text-bookmark-blue">Share your Bookmark</h1>
+                        <h1 class="text-3xl text-bookmark-blue">Share your bookmarks</h1>
                         <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">Easily share your
-                            bookmarks and collections with others. Create a shareable link that you can send at the
-                            click of
+                            bookmarks and collections with others. Create a shareable link that you can send at the click
+                            of
                             a button.</p>
                         <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">More
                             info</button>
@@ -174,60 +192,56 @@
             </div>
         </section>
 
-        <!-- Download -->
+        <!-- Download Extension -->
         <section class="py-20 mt-20">
             <!-- Heading -->
             <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                 <h1 class="text-3xl text-center text-bookmark-blue">Download the extension</h1>
-                <p class="text-center text-bookmark-grey mt-4">We’ve got more browsers in the pipeline. Please let us
-                    know
-                    if you’ve got a favourite you’d like us to prioritize.</p>
+                <p class="text-center text-bookmark-grey mt-4">We've got more browsers in the pipeline. Please do let us
+                    know if you've got a favourite you'd like us to prioritize.</p>
             </div>
-
             <!-- Cards -->
             <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
                 <!-- Card 1 -->
                 <div class="flex flex-col rounded-md shadow-md lg:mb-16">
                     <div class="p-6 flex flex-col items-center">
-                        <img src="./public/imgs/logo-chrome.svg" alt="Chrome Logo">
+                        <img src="./public/imgs/logo-chrome.svg" alt="">
                         <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Chrome</h3>
                         <p class="mb-2 text-bookmark-grey font-light">Minimum version 62</p>
                     </div>
                     <hr class="border-b border-bookmark-white">
                     <div class="flex p-6">
-                        <button type="button" class="btn btn-purple flex-1 hover:bg-bookmark-white hover:text-black">Add
-                            &
-                            Install Extension</button>
+                        <button type="button"
+                            class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">Add & Install
+                            Extension</button>
                     </div>
                 </div>
-
                 <!-- Card 2 -->
                 <div class="flex flex-col rounded-md shadow-md lg:my-8">
                     <div class="p-6 flex flex-col items-center">
-                        <img src="./public/imgs/logo-firefox.svg" alt="Firefox Logo">
+                        <img src="./public/imgs/logo-firefox.svg" alt="">
                         <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Firefox</h3>
                         <p class="mb-2 text-bookmark-grey font-light">Minimum version 55</p>
                     </div>
                     <hr class="border-b border-bookmark-white">
                     <div class="flex p-6">
-                        <button type="button" class="btn btn-purple flex-1 hover:bg-bookmark-white hover:text-black">Add
-                            &
-                            Install Extension</button>
+                        <button type="button"
+                            class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">Add & Install
+                            Extension</button>
                     </div>
                 </div>
-
                 <!-- Card 3 -->
                 <div class="flex flex-col rounded-md shadow-md lg:mt-16">
                     <div class="p-6 flex flex-col items-center">
-                        <img src="./public/imgs/logo-opera.svg" alt="Opera Logo">
+                        <img src="./public/imgs/logo-opera.svg" alt="">
                         <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Opera</h3>
                         <p class="mb-2 text-bookmark-grey font-light">Minimum version 46</p>
                     </div>
                     <hr class="border-b border-bookmark-white">
                     <div class="flex p-6">
-                        <button type="button" class="btn btn-purple flex-1 hover:bg-bookmark-white hover:text-black">Add
-                            &
-                            Install Extension</button>
+                        <button type="button"
+                            class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">Add & Install
+                            Extension</button>
                     </div>
                 </div>
             </div>
@@ -235,70 +249,58 @@
 
         <!-- FAQ -->
         <section class="bg-bookmark-white py-20">
-            <!-- Heading -->
-            <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-                <h1 class="text-3xl text-center text-bookmark-blue">Frequently Asked Questions</h1>
-                <p class="text-center text-bookmark-grey mt-4">Here are some of our FAQs. If you have any other
-                    questions
-                    you’d like answered please feel free to email us.</p>
-            </div>
-
-            <!-- FAQ Items -->
-            <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
-                <div class="faq-item border-b py-4">
-                    <button class="flex items-center justify-between w-full focus:outline-none" aria-expanded="false">
-                        <span class="text-bookmark-blue">What is a Bookmark?</span>
-                        <i class="fas fa-chevron-down text-bookmark-purple"></i>
-                    </button>
-                    <div class="answer text-bookmark-grey mt-2 hidden">
-                        <p>A bookmark is a saved link to a website that you can access easily without typing the full
-                            address.</p>
-                    </div>
-                </div>
-                <div class="faq-item border-b py-4">
-                    <button class="flex items-center justify-between w-full focus:outline-none" aria-expanded="false">
-                        <span class="text-bookmark-blue">How can I request a new browser?</span>
-                        <i class="fas fa-chevron-down text-bookmark-purple"></i>
-                    </button>
-                    <div class="answer text-bookmark-grey mt-2 hidden">
-                        <p>You can request a new browser by sending us an email at support@bookmark.com</p>
-                    </div>
-                </div>
-                <div class="faq-item border-b py-4">
-                    <button class="flex items-center justify-between w-full focus:outline-none" aria-expanded="false">
-                        <span class="text-bookmark-blue">Is there a mobile app?</span>
-                        <i class="fas fa-chevron-down text-bookmark-purple"></i>
-                    </button>
-                    <div class="answer text-bookmark-grey mt-2 hidden">
-                        <p>Yes, our mobile app is available for both Android and iOS.</p>
-                    </div>
-                </div>
-                <div class="faq-item border-b py-4">
-                    <button class="flex items-center justify-between w-full focus:outline-none" aria-expanded="false">
-                        <span class="text-bookmark-blue">What about other Chromium browsers?</span>
-                        <i class="fas fa-chevron-down text-bookmark-purple"></i>
-                    </button>
-                    <div class="answer text-bookmark-grey mt-2 hidden">
-                        <p>Our extension is compatible with all Chromium-based browsers.</p>
-                    </div>
-                </div>
-                <button type="button"
-                    class="btn btn-purple self-center mt-12 hover:bg-bookmark-white hover:text-black">More Info</button>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="bg-bookmark-purple text-white py-20">
             <div class="container">
-                <div class="sm:w-3/4 lg:w-2/4 mx-auto">
-                    <p class="font-light uppercase text-center mb-8">35,000+ already joined</p>
-                    <h1 class="text-3xl text-center">Stay up-to-date with what we’re doing</h1>
-                    <div class="flex flex-col sm:flex-row gap-6 mt-8">
-                        <input type="text" placeholder="Enter your email address"
-                            class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black">
-                        <button type="button"
-                            class="btn bg-bookmark-red hover:bg-bookmark-white hover:text-black">Contact Us</button>
+                <!-- Heading -->
+                <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+                    <h1 class="text-3xl text-center text-bookmark-blue">Frequently Asked Questions</h1>
+                    <p class="text-center text-bookmark-grey mt-4">Here are some of our FAQs. If you have any other
+                        questions
+                        you'd like answered please feel free to email us.</p>
+                </div>
+                <!-- FAQ Items -->
+                <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
+                    <div class="faq-item border-b py-4">
+                        <div class="faq-question flex justify-between items-center cursor-pointer">
+                            <h2 class="text-bookmark-blue">What is a Bookmark?</h2>
+                            <span class="text-bookmark-purple"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lacus eget nunc
+                                imperdiet fermentum. Vivamus a auctor felis, non tincidunt neque.</p>
+                        </div>
                     </div>
+                    <div class="faq-item border-b py-4">
+                        <div class="faq-question flex justify-between items-center cursor-pointer">
+                            <h2 class="text-bookmark-blue">How can I request a new browser?</h2>
+                            <span class="text-bookmark-purple"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lacus eget nunc
+                                imperdiet fermentum. Vivamus a auctor felis, non tincidunt neque.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b py-4">
+                        <div class="faq-question flex justify-between items-center cursor-pointer">
+                            <h2 class="text-bookmark-blue">Is there a mobile app?</h2>
+                            <span class="text-bookmark-purple"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lacus eget nunc
+                                imperdiet fermentum. Vivamus a auctor felis, non tincidunt neque.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b py-4">
+                        <div class="faq-question flex justify-between items-center cursor-pointer">
+                            <h2 class="text-bookmark-blue">What about other Chromium browsers?</h2>
+                            <span class="text-bookmark-purple"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lacus eget nunc
+                                imperdiet fermentum. Vivamus a auctor felis, non tincidunt neque.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="mt-12 flex self-center btn btn-purple hover:bg-bookmark-white hover:text-black">More
+                        Info</button>
                 </div>
             </div>
         </section>
@@ -308,37 +310,56 @@
     <footer class="bg-bookmark-blue py-8">
         <div class="container flex flex-col md:flex-row items-center">
             <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
-                <img src="./public/imgs/logo-bookmark-white.png" alt="Logo Bookmark">
+                <img src="./public/imgs/logo-bookmark-white.png" alt="Bookmark Logo">
                 <ul class="flex text-white uppercase gap-12 text-xs">
-                    <li class="cursor-pointer hover:bg-bookmark-red">
-                        <a href="#features">Features</a>
+                    <li class="cursor-pointer hover:bg-bookmark-purple">
+                        <a href="index.html">Home</a>
                     </li>
-                    <li class="cursor-pointer hover:bg-bookmark-red">
-                        <a href="#pricing">Pricing</a>
+                    <li class="cursor-pointer hover:bg-bookmark-purple">
+                        <a href="features.html">Features</a>
                     </li>
-                    <li class="cursor-pointer hover:bg-bookmark-red">
-                        <a href="#contact">Contact</a>
+                    <li class="cursor-pointer hover:bg-bookmark-purple">
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="cursor-pointer hover:bg-bookmark-purple">
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="flex gap-10 mt-12 md:mt-0">
                 <li class="list-none">
-                    <i class="text-2xl fab fa-twitter text-white hover:text-bookmark-red"></i>
+                    <a href="#"><i class="text-white text-2xl fab fa-facebook-square"></i></a>
                 </li>
                 <li class="list-none">
-                    <i class="text-2xl fab fa-facebook-square text-white hover:text-bookmark-red"></i>
+                    <a href="#"><i class="text-white text-2xl fab fa-twitter"></i></a>
                 </li>
             </div>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('.faq-item button').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const answer = faqItem.querySelector('.answer');
-                faqItem.classList.toggle('active');
-                button.setAttribute('aria-expanded', faqItem.classList.contains('active'));
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const icon = item.querySelector('.faq-question span i');
+                if (icon.classList.contains('fa-chevron-down')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+
+                const answer = item.querySelector('.answer');
                 answer.classList.toggle('hidden');
             });
         });
