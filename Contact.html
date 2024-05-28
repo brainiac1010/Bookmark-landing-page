@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #fff;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1E1F26;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li:hover {
+            background-color: #5267DF;
+            border-radius: 0.25rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1rem;
+            background-color: #5267DF;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2A2B3C;
+        }
+
+        .font-Poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bg-bookmark-white {
+            background-color: #F7F9FC;
+        }
+
+        .bg-bookmark-blue {
+            background-color: #1E1F26;
+        }
+
+        .bg-bookmark-red {
+            background-color: #FA5959;
+        }
+
+        .bg-bookmark-purple {
+            background-color: #5267DF;
+        }
+
+        .text-bookmark-blue {
+            color: #1E1F26;
+        }
+
+        .text-bookmark-grey {
+            color: #A0A2A7;
+        }
+
+        .text-bookmark-white {
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .mt-12 {
+            margin-top: 3rem;
+        }
+
+        .mt-20 {
+            margin-top: 5rem;
+        }
+
+        .mt-24 {
+            margin-top: 6rem;
+        }
+
+        .mt-52 {
+            margin-top: 13rem;
+        }
+
+        .sm\\:hidden {
+            display: none;
+        }
+
+        .sm\\:mt-12 {
+            margin-top: 3rem;
+        }
+
+        .sm\\:flex {
+            display: flex;
+        }
+
+        .sm\\:w-3\\ {
+            width: 75%;
+        }
+
+        .lg\\:mt-60 {
+            margin-top: 15rem;
+        }
+
+        .lg\\:mt-24 {
+            margin-top: 6rem;
+        }
+
+        .lg\\:block {
+            display: block;
+        }
+
+        .lg\\:items-start {
+            align-items: flex-start;
+        }
+
+        .lg\\:flex-row {
+            flex-direction: row;
+        }
+
+        .lg\\:flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .lg\\:w-5\\ {
+            width: 41.666667%;
+        }
+
+        .lg\\:w-full {
+            width: 100%;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .rounded-r-full {
+            border-radius: 9999px 0 0 9999px;
+        }
+
+        .rounded-l-full {
+            border-radius: 0 9999px 9999px 0;
+        }
+
+        .h-80 {
+            height: 20rem;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .gap-x-24 {
+            column-gap: 6rem;
+        }
+
+        .-bottom-24 {
+            bottom: 6rem;
+        }
+
+        .-left-36 {
+            left: 9rem;
+        }
+
+        .-right-36 {
+            right: 9rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #E5E5E5;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            padding: 0.75rem 1.5rem;
+            background-color: #5267DF;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #2A2B3C;
+        }
+    </style>
+</head>
+
+<body class="font-Poppins">
+    <!-- Header -->
+    <header>
+        <nav class="container flex items-center py-4 mt-4 sm:mt-12">
+            <div class="py-1">
+                <img src="public/imgs/logo-bookmark.svg" alt="Bookmark Logo">
+            </div>
+            <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs">
+                <li class="cursor-pointer hover:bg-bookmark-purple">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="cursor-pointer hover:bg-bookmark-purple">
+                    <a href="features.html">Features</a>
+                </li>
+                <li class="cursor-pointer hover:bg-bookmark-purple">
+                    <a href="Pricing.html">Pricing</a>
+                </li>
+                <li class="cursor-pointer hover:bg-bookmark-purple">
+                    <a href="Contact.html">Contact</a>
+                </li>
+                <button type="button" class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase">
+                    <a href="login.html" style="text-decoration: none; color: inherit;">Login</a>
+                </button>
+            </ul>
+            <div class="flex sm:hidden flex-1 justify-end">
+                <i class="text-2xl fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-bookmark-white py-20 mt-20 lg:mt-60">
+        <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-bookmark-blue">Contact Us</h1>
+            <p class="text-center text-bookmark-grey mt-4">We would love to hear from you!</p>
+        </div>
+        <!-- Contact Form -->
+        <div class="form-container container mt-12">
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bookmark-blue py-8">
+        <div class="container flex flex-col md:flex-row items-center">
+            <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
+                <img src="public/imgs/logo-bookmark-white.png" alt="Bookmark Logo">
+                <ul class="flex text-white uppercase gap-12 text-xs">
+                    <li class="cursor-pointer"><a href="index.html">Home</a></li>
+                    <li class="cursor-pointer"><a href="features.html">Features</a></li>
+                    <li class="cursor-pointer"><a href="Pricing.html">Pricing</a></li>
+                    <li class="cursor-pointer"><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex gap-10 mt-12 md:mt-0">
+                <ul class="flex gap-10">
+                    <li><i class="text-white text-2xl fab fa-twitter"></i></li>
+                    <li><i class="text-white text-2xl fab fa-facebook-square"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
